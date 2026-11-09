@@ -1,0 +1,12 @@
+.runtime/
+.runtime-*
+backups/
+*.log
+store-preview.png
+node_modules/
+huawei-preview.png
+dist/
+*.zip
+.env
+.env.*
+!.env.example

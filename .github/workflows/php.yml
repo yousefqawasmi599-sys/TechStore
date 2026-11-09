@@ -1,0 +1,12 @@
+name: PHP syntax
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    container: php:8.2-cli
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check PHP syntax
+        run: find public tools tests -name '*.php' -print0 | xargs -0 -n1 php -l
